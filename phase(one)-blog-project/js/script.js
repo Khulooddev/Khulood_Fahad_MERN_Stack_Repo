@@ -137,7 +137,7 @@ function viewBlogs() {
 
         let aTag = document.createElement('A');
         aTag.classList.add('float-right', 'readmore-link');
-        pTag.innerText = content;
+
 
         aTag.innerText = 'Read more';
         pTag.classList.add('blog-content-p');
@@ -151,6 +151,7 @@ function viewBlogs() {
 
             content = content.substring(0, 250);
             content += '...';
+            pTag.innerText = content;
         }
     });
 
