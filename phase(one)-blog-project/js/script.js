@@ -142,8 +142,6 @@ function viewBlogs() {
         aTag.innerText = 'Read more';
         pTag.classList.add('blog-content-p');
 
-        divCol8.appendChild(pTag);
-        divCol8.append(aTag);
 
         // used to trim the string when the nummber of characters exceed 250 
         // append '...' at the end
@@ -151,8 +149,15 @@ function viewBlogs() {
 
             content = content.substring(0, 250);
             content += '...';
+
             pTag.innerText = content;
+            divCol8.appendChild(pTag);
+            divCol8.append(aTag);
         }
+
+        pTag.innerText = content;
+        divCol8.appendChild(pTag);
+        divCol8.append(aTag);
     });
 
     // iterates through session storage to get posts' images
