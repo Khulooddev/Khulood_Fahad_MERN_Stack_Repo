@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- JQuery CND -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Script -->
+    <script src="/js/script.js"></script>
+    <title>Blog Website</title>
+  </head>
+  <body>
+    <!-- Import Header -->
+    <div class="header-section"></div>
+    <div class="create-a-blog">
+      <h1 class="text-center mb-5">Let's post something!</h1>
+      <div class="container">
+        <form id="form-id">
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <input
+                class="form-control"
+                id="inputtext-id"
+                type="text"
+                placeholder="input your title here"
+                value=""
+                required
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea
+              class="form-control"
+              id="textarea-id"
+              rows="3"
+              placeholder="input your content here"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <input
+              type="file"
+              class="form-control-file"
+              id="inputfile-id"
+              required
+              onchange="trackFile(this)"
+            />
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary mb-2 float-right"
+            id="submit-btn"
+          >
+            post
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- Import Footer -->
+    <div class="contact-us footer-section"></div>
+  </body>
+</html>
