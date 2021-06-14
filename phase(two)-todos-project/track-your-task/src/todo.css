@@ -1,0 +1,218 @@
+* {
+  font-family: "Bungee Hairline";
+  box-sizing: border-box;
+}
+
+/* ADD-TO-DO STYLE */
+#input-text {
+  border: 1px solid rgba(255, 255, 255, 0.507);
+  margin-right: 0.2rem;
+  background-color: transparent;
+  color: white;
+}
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.479);
+  text-transform: capitalize;
+  font-weight: 800;
+}
+.form-control:focus {
+  border-color: #7f5a83;
+  color: white;
+  font-weight: 800;
+  background-color: transparent;
+  outline: none !important;
+  box-shadow: none !important;
+}
+#button-add {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.507);
+  color: white;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-right: 0.1rem;
+}
+#button-add:hover {
+  background-color: #7f5a83;
+  overflow: hidden;
+  transition: ease-in 0.2s;
+}
+
+/* VIEW-TO-DO STYLE */
+ul {
+  padding: 0 0.8rem;
+}
+li {
+  list-style-type: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding: 1rem;
+  margin: 0.2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.473);
+}
+li:hover {
+  background-color: #7f5a8367;
+  transition: ease-out 0.2s;
+}
+.button-delete {
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+  border: none;
+}
+.button-delete:hover {
+  background-color: transparent;
+  color: black;
+  font-weight: 900;
+  outline: none;
+  transition: ease-in 0.2s;
+}
+#tasks-container {
+  margin-top: 4rem;
+  padding: 0.5rem 0.5rem;
+  color: white;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+#form-container {
+  margin-top: 1rem;
+}
+.input-text-update,
+.input-text-update::placeholder,
+input[readonly].input-text-update {
+  font-family: "Roboto Mono", monospace;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  font-weight: 900;
+  text-align: left;
+  border: none;
+  padding: 1rem 0;
+  transition: color 0.3s ease;
+}
+.form-control.input-text-update:focus {
+  font-family: "Roboto Mono", monospace;
+  color: black;
+  transition: ease-out 0.1s;
+}
+.input-text-update-complete {
+  text-decoration: line-through;
+  color: hsl(0, 0%, 70%);
+  font-weight: 600;
+}
+
+.checkbox-task {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  cursor: pointer;
+  border-radius: 0.4em;
+  border: 0.1em solid white;
+  align-items: center;
+}
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 900px) {
+  #heading-title {
+    font-size: 6vw;
+  }
+  .form-control::placeholder {
+    font-size: 1rem;
+  }
+
+  li {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #heading-title {
+    font-size: 7vw;
+    text-align: center;
+  }
+  .button-delete {
+    font-size: 0.8rem;
+  }
+  ul {
+    padding: 0 1rem;
+  }
+  li {
+    font-size: 0.9rem;
+  }
+  ul p {
+    font-size: 5vw;
+  }
+  #input-text::placeholder {
+    font-size: 1rem;
+  }
+  .input-text-update,
+  .input-text-update::placeholder,
+  .input[readonly].input-text-update {
+    font-size: 1rem;
+  }
+  .col.input-text-update {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  ul {
+    padding: 0 0.2rem;
+  }
+  li {
+    font-size: 0.6rem;
+  }
+  #input-text::placeholder {
+    font-size: 1rem;
+  }
+  .input-text-update,
+  .input-text-update::placeholder,
+  .input[readonly].input-text-update {
+    font-size: 0.8rem;
+  }
+  .col.input-text-update {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    width: auto;
+  }
+  .col.checkbox-task {
+    width: 3em;
+    height: 3em;
+    font-size: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  ul {
+    padding: 0;
+  }
+
+  #input-text::placeholder {
+    font-size: 0.7rem;
+  }
+  .input-text-update,
+  .input-text-update::placeholder,
+  .input[readonly].input-text-update {
+    font-size: 1rem;
+  }
+  .col.input-text-update {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    width: auto;
+  }
+  .col.checkbox-task {
+    width: 4em;
+    height: 4em;
+    font-size: 10rem;
+    border-color: pink;
+  }
+  .col.button-delete {
+    font-size: 0.8em;
+  }
+}

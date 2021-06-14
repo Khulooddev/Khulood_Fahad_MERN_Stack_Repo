@@ -1,0 +1,9 @@
+{
+  "short_name": "Track Your Task",
+  "name": "Create A To Do List",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
